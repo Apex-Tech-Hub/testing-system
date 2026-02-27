@@ -5,7 +5,7 @@ using Testing_System_Backend.Models;
 //using Testing_System_Backend.DTOs; // Agar aapne DTOs alag folder mein rakhe hain
 
 namespace Testing_System_Backend.Controllers
-{
+{ 
     [ApiController]
     [Route("api/admin/[controller]")]
     public class QuestionsController : ControllerBase
@@ -17,7 +17,7 @@ namespace Testing_System_Backend.Controllers
             _context = context;
         }
 
-        // 1. GET ALL QUESTIONS (Aapke Table, Search, aur Tabs ke liye)
+        // 1. GET ALL QUESTIONS (Table, Search, aur Tabs ke liye)
         [HttpGet]
         public async Task<ActionResult<IEnumerable<QuestionResponseDto>>> GetQuestions()
         {
@@ -30,7 +30,7 @@ namespace Testing_System_Backend.Controllers
                     Category = q.Category,
                     Difficulty = q.Difficulty,
                     Correct = q.CorrectOption,
-                    // Professional Logic: Correct Option ka asli Text nikalna
+                    // Correct Option ka asli Text nikalna
                     CorrectText = q.CorrectOption == "A" ? q.OptionA :
                                   q.CorrectOption == "B" ? q.OptionB :
                                   q.CorrectOption == "C" ? q.OptionC : q.OptionD,
@@ -41,7 +41,8 @@ namespace Testing_System_Backend.Controllers
 
             return Ok(questions);
         }
-        // 3. CREATE NEW QUESTION ("Add New" button ke liye)
+
+        // 2. CREATE NEW QUESTION ("Add New" button ke liye)
         [HttpPost]
         public async Task<IActionResult> CreateQuestion([FromBody] QuestionCreateDto dto)
         {
@@ -65,7 +66,31 @@ namespace Testing_System_Backend.Controllers
             return Ok(new { message = "Question added successfully!" });
         }
 
-        // 2. DELETE QUESTION (Trash button ke liye)
+        // 3. UPDATE QUESTION ("Edit" button ke liye)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateQuestion(int id, [FromBody] QuestionUpdateDto dto)
+        {
+            // Database mein purana question dhoondna
+            var question = await _context.Questions.FindAsync(id);
+            if (question == null) return NotFound(new { message = "Question not found." });
+
+            // Naye data se purane data ko replace karna
+            question.Text = dto.Text;
+            question.Category = dto.Category;
+            question.Difficulty = dto.Difficulty;
+            question.OptionA = dto.OptionA;
+            question.OptionB = dto.OptionB;
+            question.OptionC = dto.OptionC;
+            question.OptionD = dto.OptionD;
+            question.CorrectOption = dto.CorrectOption;
+
+            // Database ko update karna
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Question updated successfully." });
+        }
+
+        // 4. DELETE QUESTION ("Trash/Delete" button ke liye)
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteQuestion(int id)
         {
@@ -77,7 +102,5 @@ namespace Testing_System_Backend.Controllers
 
             return Ok(new { message = "Question deleted successfully." });
         }
-
-        // (Future: POST aur PUT methods hum "Add New" form banate waqt likhenge)
     }
 }
