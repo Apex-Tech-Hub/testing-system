@@ -36,7 +36,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options => {
     options.AddPolicy("MyPolicy", policy => {
-        policy.WithOrigins("http://localhost:3000")
+        policy.WithOrigins("http://localhost:3000","http://192.168.18.47:3000")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });

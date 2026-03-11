@@ -39,7 +39,9 @@ export default function EnhancedTestOrchestrator() {
     const fetchJobs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5064/api/AdminTests/available-jobs', {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+        const response = await fetch(`${apiUrl}/api/AdminTests/available-jobs`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (response.ok) {

@@ -17,7 +17,9 @@ export default function ResultsPage() {
     const fetchResults = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5064/api/AdminResults/all-results', {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+        const response = await fetch(`${apiUrl}/api/AdminResults/all-results`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
 

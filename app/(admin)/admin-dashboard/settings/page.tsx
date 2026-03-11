@@ -31,7 +31,9 @@ export default function SettingsPage() {
   const fetchAdminTeam = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5064/api/AdminSettings/team', {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+      const response = await fetch(`${apiUrl}/api/AdminSettings/team`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {

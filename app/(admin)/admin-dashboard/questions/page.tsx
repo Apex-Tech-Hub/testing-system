@@ -16,11 +16,12 @@ export default function QuestionsPage() {
   // Modal & Edit States
   const [showForm, setShowForm] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState(null); // EDIT LOGIC: Ye line add ki hai
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:5064/api/admin/questions');
+      const response = await fetch(`${apiUrl}/api/admin/questions`);
       if (response.ok) {
         const data = await response.json();
         setQuestions(data);
@@ -35,8 +36,9 @@ export default function QuestionsPage() {
   useEffect(() => { fetchQuestions(); }, [fetchQuestions]);
 
   const handleDelete = async (id: number) => {
+    
     if (confirm("Are you sure you want to delete this question?")) {
-      const res = await fetch(`http://localhost:5064/api/admin/questions/${id}`, { method: 'DELETE' });
+      const res = await fetch(`${apiUrl}/api/admin/questions/${id}`, { method: 'DELETE' });
       if (res.ok) fetchQuestions(); // Refresh list
     }
   };

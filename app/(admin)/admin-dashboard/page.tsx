@@ -30,9 +30,10 @@ export default function AdminOverview() {
       router.push('/login');
     } else {
       setIsAuthorized(true);
-      
+       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
       // 🟢 NEW: Backend API Call (Exact match without changing UI)
-      fetch('http://localhost:5064/api/AdminDashboard/overview', {
+      fetch(`${apiUrl}/api/AdminDashboard/overview`, {
         headers: { 'Authorization': `Bearer ${token}` }
       })
       .then(res => res.json())

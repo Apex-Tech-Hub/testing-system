@@ -28,11 +28,12 @@ export default function JobsManagementPage() {
   const [filter, setFilter] = useState('All');
   const [jobs, setJobs] = useState<JobItem[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch('http://localhost:5064/api/Jobs/all');
+        const response = await fetch(`${apiUrl}/api/Jobs/all`);
         if (response.ok) {
           const data = await response.json();
           setJobs(data);
