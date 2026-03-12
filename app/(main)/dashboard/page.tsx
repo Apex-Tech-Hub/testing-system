@@ -30,7 +30,9 @@ export default function DashboardPage() {
       }
 
       try {
-        const response = await fetch('http://localhost:5064/api/CandidateDashboard/overview', {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+        const response = await fetch(`${apiUrl}/api/CandidateDashboard/overview`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

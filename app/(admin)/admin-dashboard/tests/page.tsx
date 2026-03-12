@@ -31,7 +31,9 @@ export default function TestsManagementPage() {
     const fetchTests = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await fetch('http://localhost:5064/api/AdminTests/all', {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+        const response = await fetch(`${apiUrl}/api/AdminTests/all`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }

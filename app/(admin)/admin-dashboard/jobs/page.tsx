@@ -28,19 +28,13 @@ export default function JobsManagementPage() {
   const [filter, setFilter] = useState('All');
   const [jobs, setJobs] = useState<JobItem[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
-  
-  // 3 Dots Menu track karne ke liye
-  const [openMenuId, setOpenMenuId] = useState<string | null>(null);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // 🟢 1. FETCH JOBS API
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5064/api/Jobs/all', {
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-        
+        const response = await fetch(`${apiUrl}/api/Jobs/all`);
         if (response.ok) {
           const data = await response.json();
           setJobs(data);

@@ -23,10 +23,9 @@ export default function CandidatesPage() {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:5064/api/admin/candidates?search=${searchTerm}`, {
-           headers: { 'Authorization': `Bearer ${token}` }
-        });
+          const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+          const response = await fetch(`${apiUrl}/api/admin/candidates?search=${searchTerm}`);
         if (response.ok) {
           const data = await response.json();
           setCandidates(data);
