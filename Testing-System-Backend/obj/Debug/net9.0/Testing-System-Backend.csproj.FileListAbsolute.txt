@@ -316,7 +316,6 @@ C:\Users\ibrar\Desktop\testing-system\Testing-System-Backend\obj\Debug\net9.0\Te
 C:\Users\ibrar\Desktop\testing-system\Testing-System-Backend\obj\Debug\net9.0\Testing-System-Backend.genruntimeconfig.cache
 C:\Users\ibrar\Desktop\testing-system\Testing-System-Backend\obj\Debug\net9.0\ref\Testing-System-Backend.dll
 E:\testing system\testing-system-frontend\Testing-System-Backend\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-E:\testing system\testing-system-frontend\Testing-System-Backend\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\ADMIN\Desktop\testing-system\testing-system-backend\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\ADMIN\Desktop\testing-system\testing-system-backend\bin\Debug\net9.0\appsettings.json
 C:\Users\ADMIN\Desktop\testing-system\testing-system-backend\bin\Debug\net9.0\Testing-System-Backend.staticwebassets.endpoints.json
@@ -476,3 +475,4 @@ C:\Users\ADMIN\Desktop\testing-system\testing-system-backend\obj\Debug\net9.0\re
 C:\Users\ADMIN\Desktop\testing-system\testing-system-backend\obj\Debug\net9.0\Testing-System-Backend.pdb
 C:\Users\ADMIN\Desktop\testing-system\testing-system-backend\obj\Debug\net9.0\Testing-System-Backend.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\testing-system\testing-system-backend\obj\Debug\net9.0\ref\Testing-System-Backend.dll
+E:\testing system\testing-system-frontend\Testing-System-Backend\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

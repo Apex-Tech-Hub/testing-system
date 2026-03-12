@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { X } from 'lucide-react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { X, Loader2 } from 'lucide-react';
 import QuestionForm from '@/components/admin/questions/modal/QuestionForm';
 import { QuestionHeader } from '@/components/admin/questions/QuestionHeader';
 import { QuestionFilters } from '@/components/admin/questions/QuestionFilters';
@@ -10,12 +10,16 @@ import { QuestionTable } from '@/components/admin/questions/QuestionTable';
 export default function QuestionsPage() {
   const [questions, setQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isImporting, setIsImporting] = useState(false); // 🟢 Import Loading state
   const [activeTab, setActiveTab] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   
   // Modal & Edit States
   const [showForm, setShowForm] = useState(false);
-  const [selectedQuestion, setSelectedQuestion] = useState(null); // EDIT LOGIC: Ye line add ki hai
+  const [selectedQuestion, setSelectedQuestion] = useState(null); 
+  
+  // 🟢 Hidden File Input ka Reference
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
@@ -37,26 +41,62 @@ export default function QuestionsPage() {
   const handleDelete = async (id: number) => {
     if (confirm("Are you sure you want to delete this question?")) {
       const res = await fetch(`http://localhost:5064/api/admin/questions/${id}`, { method: 'DELETE' });
-      if (res.ok) fetchQuestions(); // Refresh list
+      if (res.ok) fetchQuestions();
     }
   };
 
-  // EDIT LOGIC: Naya question add karne ka function
   const handleAddNew = () => {
     setSelectedQuestion(null);
     setShowForm(true);
   };
 
-  // EDIT LOGIC: Purana question edit karne ka function
   const handleEdit = (q: any) => {
     setSelectedQuestion(q);
     setShowForm(true);
   };
 
-  // EDIT LOGIC: Modal close karne ka function
   const handleCloseModal = () => {
     setShowForm(false);
     setSelectedQuestion(null);
+  };
+
+  // 🟢 IMPORT LOGIC: Hidden input ko click karwana
+  const handleImportClick = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
+  // 🟢 IMPORT LOGIC: File select hone ke baad backend par bhejna
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsImporting(true);
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const response = await fetch('http://localhost:5064/api/admin/questions/import', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(data.message); // Success message
+        fetchQuestions();    // Table refresh karein
+      } else {
+        alert("Failed to import questions. Please check the CSV format.");
+      }
+    } catch (error) {
+      console.error("Import error:", error);
+      alert("An error occurred while importing.");
+    } finally {
+      setIsImporting(false);
+      // Reset input taake same file dobara select ho sake
+      if (fileInputRef.current) fileInputRef.current.value = ''; 
+    }
   };
 
   const filteredQuestions = questions.filter((q: any) => {
@@ -68,10 +108,21 @@ export default function QuestionsPage() {
 
   return (
     <div className="p-8 space-y-8 relative min-h-screen">
+      
+      {/*  HIDDEN FILE INPUT */}
+      <input 
+        type="file" 
+        accept=".csv" 
+        className="hidden" 
+        ref={fileInputRef} 
+        onChange={handleFileUpload} 
+      />
+
       <QuestionHeader 
         count={filteredQuestions.length} 
         total={questions.length} 
-        onAddNew={handleAddNew}  // CONNECTED: Add New
+        onAddNew={handleAddNew}  
+        onImport={handleImportClick} // CONNECTED: Ye prop QuestionHeader mein pass karein
       />
 
       <QuestionFilters 
@@ -81,12 +132,19 @@ export default function QuestionsPage() {
         setSearchQuery={setSearchQuery} 
       />
 
-      <QuestionTable 
-        questions={filteredQuestions} 
-        isLoading={isLoading} 
-        onEdit={handleEdit}      // CONNECTED: Edit function pass kar diya
-        onDelete={handleDelete}
-      />
+      {isImporting ? (
+        <div className="flex flex-col items-center justify-center py-20 text-slate-400">
+           <Loader2 size={40} className="animate-spin mb-4 text-emerald-500" />
+           <p className="font-bold text-slate-900 uppercase tracking-widest">Importing Questions...</p>
+        </div>
+      ) : (
+        <QuestionTable 
+          questions={filteredQuestions} 
+          isLoading={isLoading} 
+          onEdit={handleEdit}      
+          onDelete={handleDelete}
+        />
+      )}
 
       {/* Modal Overlay */}
       {showForm && (
@@ -97,7 +155,7 @@ export default function QuestionsPage() {
               <X size={24} />
             </button>
             <QuestionForm 
-              initialData={selectedQuestion} // CONNECTED: 
+              initialData={selectedQuestion} 
               onSuccess={() => { handleCloseModal(); fetchQuestions(); }} 
               onCancel={handleCloseModal} 
             />
