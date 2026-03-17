@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\controllers\\candidatedashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:controllers\\candidatedashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\models\\applyjobrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:models\\applyjobrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\controllers\\admintestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:controllers\\admintestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\models\\createtestrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:models\\createtestrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Migrations\\20260313164539_AddTestsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260313164539_AddTestsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,20 +71,12 @@
       "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\controllers\\candidatedashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:controllers\\candidatedashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:controllers\\candidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\controllers\\adminsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:controllers\\adminsettingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,6 +97,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\controllers\\adminresultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:controllers\\adminresultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|e:\\testing system\\testing-system-frontend\\testing-system-backend\\migrations\\20260313164539_addteststable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31FB7782-A7D4-5832-F14D-E165A4674567}|Testing-System-Backend.csproj|solutionrelative:migrations\\20260313164539_addteststable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -122,33 +126,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20260313164539_AddTestsTable.cs",
-              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Migrations\\20260313164539_AddTestsTable.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260313164539_AddTestsTable.cs",
-              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Migrations\\20260313164539_AddTestsTable.cs",
-              "RelativeToolTip": "Migrations\\20260313164539_AddTestsTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ApplyJobRequest.cs",
+              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\ApplyJobRequest.cs",
+              "RelativeDocumentMoniker": "Models\\ApplyJobRequest.cs",
+              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\ApplyJobRequest.cs",
+              "RelativeToolTip": "Models\\ApplyJobRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T16:45:39.913Z",
+              "WhenOpened": "2026-03-17T18:19:13.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Test.cs",
-              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\Test.cs",
-              "RelativeDocumentMoniker": "Models\\Test.cs",
-              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\Test.cs",
-              "RelativeToolTip": "Models\\Test.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T16:41:08.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "CreateTestRequest.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\CreateTestRequest.cs",
               "RelativeDocumentMoniker": "Models\\CreateTestRequest.cs",
@@ -156,12 +147,11 @@
               "RelativeToolTip": "Models\\CreateTestRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T11:27:40.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T11:27:40.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "CreateJobRequest.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\CreateJobRequest.cs",
               "RelativeDocumentMoniker": "Models\\CreateJobRequest.cs",
@@ -169,12 +159,11 @@
               "RelativeToolTip": "Models\\CreateJobRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T10:46:03.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T10:46:03.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Application.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\Application.cs",
               "RelativeDocumentMoniker": "Models\\Application.cs",
@@ -182,12 +171,11 @@
               "RelativeToolTip": "Models\\Application.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T14:29:32.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T14:29:32.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AddAdminRequest.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\AddAdminRequest.cs",
               "RelativeDocumentMoniker": "Models\\AddAdminRequest.cs",
@@ -195,12 +183,11 @@
               "RelativeToolTip": "Models\\AddAdminRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T11:31:40.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T11:31:40.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -208,12 +195,11 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T14:30:33.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T14:30:33.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AdminTestsController.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\AdminTestsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminTestsController.cs",
@@ -226,7 +212,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "CandidateDashboardController.cs",
+              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\CandidateDashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CandidateDashboardController.cs",
+              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\CandidateDashboardController.cs",
+              "RelativeToolTip": "Controllers\\CandidateDashboardController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAqwFUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T14:36:22.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-09T15:28:45.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Test.cs",
+              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\Test.cs",
+              "RelativeDocumentMoniker": "Models\\Test.cs",
+              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\Test.cs",
+              "RelativeToolTip": "Models\\Test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T16:41:08.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20260313164539_AddTestsTable.cs",
+              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Migrations\\20260313164539_AddTestsTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260313164539_AddTestsTable.cs",
+              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Migrations\\20260313164539_AddTestsTable.cs",
+              "RelativeToolTip": "Migrations\\20260313164539_AddTestsTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T16:45:39.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Education.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\Education.cs",
               "RelativeDocumentMoniker": "Models\\Education.cs",
@@ -234,12 +270,11 @@
               "RelativeToolTip": "Models\\Education.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T16:37:56.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T16:37:56.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Job.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\Job.cs",
               "RelativeDocumentMoniker": "Models\\Job.cs",
@@ -247,12 +282,11 @@
               "RelativeToolTip": "Models\\Job.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAgwBoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T14:29:06.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T14:29:06.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\LoginDto.cs",
               "RelativeDocumentMoniker": "Models\\LoginDto.cs",
@@ -260,12 +294,11 @@
               "RelativeToolTip": "Models\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T11:25:45.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T11:25:45.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "TestResult.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\TestResult.cs",
               "RelativeDocumentMoniker": "Models\\TestResult.cs",
@@ -273,12 +306,11 @@
               "RelativeToolTip": "Models\\TestResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T14:30:10.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T14:30:10.65Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "TestRuleDto.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\TestRuleDto.cs",
               "RelativeDocumentMoniker": "Models\\TestRuleDto.cs",
@@ -286,12 +318,11 @@
               "RelativeToolTip": "Models\\TestRuleDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T11:28:25.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T11:28:25.462Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -299,12 +330,11 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T10:27:40.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T10:27:40.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -312,25 +342,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T10:30:54.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T10:30:54.992Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CandidateDashboardController.cs",
-              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\CandidateDashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CandidateDashboardController.cs",
-              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\CandidateDashboardController.cs",
-              "RelativeToolTip": "Controllers\\CandidateDashboardController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAADcAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T14:36:22.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "CandidatesController.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\CandidatesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CandidatesController.cs",
@@ -338,12 +354,11 @@
               "RelativeToolTip": "Controllers\\CandidatesController.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAAAHsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T12:44:39.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T12:44:39.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AdminSettingsController.cs",
               "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\Controllers\\AdminSettingsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminSettingsController.cs",
@@ -351,8 +366,7 @@
               "RelativeToolTip": "Controllers\\AdminSettingsController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAADwvywAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T12:07:33.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T12:07:33.221Z"
             },
             {
               "$type": "Document",
@@ -365,18 +379,6 @@
               "ViewState": "AgIAAHsAAAAAAAAAAAAAAJcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-10T12:44:15.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "E:\\testing system\\testing-system-frontend\\Testing-System-Backend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-09T15:28:45.147Z"
             },
             {
               "$type": "Document",

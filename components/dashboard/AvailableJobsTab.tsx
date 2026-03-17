@@ -1,5 +1,7 @@
 'use client';
 
+// 🟢 NEW: Imported useState for state management and Loader2 for the loading spinner
+import { useState } from 'react';
 import { 
   Search, 
   MapPin, 
@@ -8,7 +10,8 @@ import {
   Users, 
   Calendar, 
   Download, 
-  ArrowRight 
+  ArrowRight,
+  Loader2
 } from "lucide-react";
 
 type Job = {
@@ -21,6 +24,7 @@ type Job = {
   education: string;
   lastDate: string;
   status: string;
+  advertisementUrl?: string; // 🟢 NEW: Optional field for future PDF/Image downloads
 };
 
 type AvailableJobsTabProps = {
@@ -28,6 +32,57 @@ type AvailableJobsTabProps = {
 };
 
 export default function AvailableJobsTab({ availableJobs }: AvailableJobsTabProps) {
+  // 🟢 NEW: State to track the ID of the job currently being applied to
+  const [applyingTo, setApplyingTo] = useState<string | number | null>(null);
+
+  // 🟢 NEW: Asynchronous handler to submit the job application to the backend API
+  const handleApply = async (jobId: string | number) => {
+    if (!confirm("Are you sure you want to apply for this position?")) return;
+
+    setApplyingTo(jobId);
+    try {
+      const token = localStorage.getItem('token');
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5064';
+
+      const response = await fetch(`${apiUrl}/api/CandidateDashboard/apply`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ jobId: Number(jobId) })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("🎉 Application Submitted Successfully!");
+        
+        // 🟢 NEW: Page reload to fetch updated dashboard data (Applied Jobs & Stats)
+        window.location.reload(); 
+        
+      } else {
+        alert(`Failed: ${data.message || "Could not submit application."}`);
+      }
+    } catch (error) {
+      console.error("Error applying for job:", error);
+      alert("A network error occurred while submitting your application.");
+    } finally {
+      setApplyingTo(null);
+    }
+  };
+
+  // 🟢 NEW: Handler function for the download advertisement button
+  const handleDownload = (url?: string) => {
+    if (url) {
+      // Opens the advertisement link in a new browser tab
+      window.open(url, '_blank');
+    } else {
+      // Fallback alert if no file link is provided by the backend
+      alert("The official advertisement document for this position has not been uploaded yet.");
+    }
+  };
+
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
       
@@ -92,10 +147,24 @@ export default function AvailableJobsTab({ availableJobs }: AvailableJobsTabProp
               </div>
               
               <div className="flex items-center gap-2 w-full sm:w-auto">
-                <button className="flex-1 sm:flex-none px-6 py-2.5 bg-emerald-600 text-white rounded-xl font-bold text-xs hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-200 transition-all active:scale-95 flex items-center justify-center gap-2">
-                  Apply Now <ArrowRight size={14} />
+                {/* 🟢 CHANGED: Added onClick handler, disabled state, and dynamic loading UI */}
+                <button 
+                  onClick={() => handleApply(job.id)}
+                  disabled={applyingTo === job.id}
+                  className="flex-1 sm:flex-none px-6 py-2.5 bg-emerald-600 text-white rounded-xl font-bold text-xs hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-200 transition-all active:scale-95 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {applyingTo === job.id ? (
+                    <><Loader2 size={14} className="animate-spin" /> Submitting...</>
+                  ) : (
+                    <>Apply Now <ArrowRight size={14} /></>
+                  )}
                 </button>
-                <button className="p-2.5 bg-white text-slate-400 border border-slate-200 rounded-xl hover:text-blue-600 hover:border-blue-200 transition-all" title="Download Advertisement">
+                {/* 🟢 CHANGED: Attached handleDownload function to the download button */}
+                <button 
+                  onClick={() => handleDownload(job.advertisementUrl)}
+                  className="p-2.5 bg-white text-slate-400 border border-slate-200 rounded-xl hover:text-blue-600 hover:border-blue-200 transition-all" 
+                  title="Download Advertisement"
+                >
                   <Download size={18} />
                 </button>
               </div>
